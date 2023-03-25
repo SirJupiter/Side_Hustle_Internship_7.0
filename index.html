@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Side Hustle Internship is where you learn in-demand digital skills for FREE. Register for the Side Hustle Internship 7.0 to learn a digital skill for free."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/49b4249f6d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Home | Side Hustle Internship 7.0</title>
+  </head>
+  <body>
+    <header id="home">
+      <div class="container">
+        <nav class="navbar">
+          <div class="brand-logo">
+            <img src="img/side-hustle.svg" alt="" />
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Bootcamp</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <a href="#">Login</a>
+          </div>
+        </nav>
+
+        <div class="header-content">
+          <div class="header-content-one">
+            <div class="header-content-desc">
+              <div class="desc-texts">
+                <h1>
+                  Gain in-demand skills for <span class="my-1">free</span>
+                </h1>
+                <p>
+                  Join the Side Hustle Internship to learn and get the hands-on
+                  experience needed. Our interns are ready to take on
+                  entry-level and junior positions in just 8 weeks.
+                </p>
+              </div>
+              <div class="desc-logos">
+                <img src="img/jobberman.svg" alt="jobberman" />
+                <img src="img/raven-banksvg.svg" alt="raven bank" />
+                <img src="img/thire.svg" alt="thire" />
+              </div>
+            </div>
+
+            <div class="header-content-heros">
+              <img src="img/hero-image.f23a6ca9.png" alt="" />
+              <p>
+                <i class="fa-solid fa-circle"></i>
+                Over 300 thousand young Africans have started their journey into
+                tech with us
+              </p>
+            </div>
+          </div>
+
+          <div class="header-content-two">
+            <form id="reg-form" action="thankyou.html">
+              <div class="input-icons">
+                <i class="fa-sharp fa-solid fa-user fa-2x"></i>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="   Full Name"
+                  required
+                />
+              </div>
+
+              <div class="input-icons">
+                <i class="fa-sharp fa-solid fa-envelope fa-2x"></i>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="   Email Address"
+                  required
+                />
+              </div>
+
+              <div class="input-icons">
+                <i class="fa-sharp fa-solid fa-lock fa-2x"></i>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="   Your Password"
+                  required
+                />
+              </div>
+              <button class="reg-btn" type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const form = document.getElementById("reg-form");
+
+      const validateForm = function () {
+        const formFields = document.querySelectorAll("#reg-form [required]");
+
+        for (let i = 0; i < formFields.length; i++) {
+          if (!formFields[i].value) {
+            return false;
+          }
+        }
+        return true;
+      };
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (validateForm()) {
+          window.location.href = "thankyou.html";
+        } else {
+          alert("Please fill in all fields");
+        }
+      });
+    </script>
+  </body>
+</html>

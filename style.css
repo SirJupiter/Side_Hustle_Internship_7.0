@@ -1,0 +1,346 @@
+:root {
+  --color-one: #021008;
+  --color-two: #12a452;
+  --color-hover: #89d2a9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+i {
+  color: var(--color-two);
+}
+.btn {
+  display: inline-block;
+  border: none;
+  background-color: var(--color-two);
+  color: white;
+  border-radius: 3px;
+  padding: 0.8rem 2rem;
+}
+
+.reg-btn {
+  color: white;
+  background-color: var(--color-two);
+  border: none;
+  border-radius: 3px;
+  padding: 0.8rem 2rem;
+}
+
+.btn:hover,
+.reg-btn:hover {
+  color: var(--color-one);
+  background-color: var(--color-hover);
+}
+
+.my-1 {
+  color: var(--color-two);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+/* Header - Full Page */
+#home {
+  background-color: var(--color-one);
+}
+
+/* Navigation Bar */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2.5fr;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1.2rem 0;
+}
+
+.navbar > div:last-child {
+  justify-self: right;
+  margin-right: 4rem;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 1.2rem;
+}
+
+.navbar a:hover {
+  color: var(--color-two);
+}
+
+/* Header Contents */
+.header-content-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 100px 0;
+  height: 60vh;
+}
+
+.header-content-desc {
+  flex: 1;
+}
+
+.header-content-heros {
+  flex: 1.5;
+  align-self: center;
+}
+
+.desc-texts {
+  color: white;
+  padding-right: 4rem;
+}
+
+.desc-texts h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.desc-texts p {
+  margin-bottom: 5rem;
+}
+
+.desc-logos img {
+  width: 100px;
+  margin-right: 2.2rem;
+}
+
+.header-content-heros img {
+  width: 700px;
+}
+
+.header-content-heros p {
+  color: white;
+  margin-left: 6rem;
+  font-size: 14px;
+}
+
+/* Form Styling */
+.header-content-two {
+  margin: 60px 0 40px;
+}
+#reg-form {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+#reg-form .input-icons {
+  margin-bottom: 1.4rem;
+}
+
+.input-icons input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 3rem;
+  font-size: 17px;
+}
+
+.input-icons i {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  color: var(--color-one);
+}
+
+#reg-form button {
+  cursor: pointer;
+}
+
+/* Thank You Page */
+#header {
+  background-color: rgba(2, 16, 8, 0.9);
+  position: relative;
+}
+
+#header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(img/pexels-pavel-danilyuk-5496463.jpg) no-repeat center
+    center/cover;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+.thank-you {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.thank-you-image {
+  flex: 1;
+}
+.thank-you-image img {
+  width: 90%;
+}
+
+.thank-you-text {
+  flex: 2;
+  text-align: center;
+  color: white;
+  padding: 0 4rem;
+  max-width: 1000px;
+}
+
+.thank-you-text i {
+  margin-bottom: 3rem;
+}
+
+.thank-you-text h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you-text h4 {
+  font-weight: 100;
+  margin-bottom: 5rem;
+}
+
+.thank-you-text a:hover {
+  color: var(--color-two);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .header-content-one {
+    display: block;
+    margin-top: 120px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .desc-logos {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .desc-logos img {
+    width: 70px;
+    margin-right: 1rem;
+  }
+
+  .desc-texts {
+    padding: 0;
+  }
+
+  .desc-texts p {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .header-content-heros p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .header-content-heros img {
+    width: 100%;
+  }
+
+  .header-content-two {
+    margin: 20px 0 40px;
+  }
+  #reg-form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar .brand-logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar ul {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .navbar > div:last-child {
+    margin-right: 0;
+    margin-top: 0.5rem;
+  }
+  .header-content-one {
+    display: block;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .desc-logos {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .desc-logos img {
+    width: 70px;
+    margin-right: 1rem;
+  }
+
+  .desc-texts {
+    padding: 0;
+  }
+
+  .desc-texts p {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .header-content-heros p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .header-content-heros img {
+    width: 100%;
+  }
+
+  .header-content-two {
+    margin: 75px 0 40px;
+  }
+  #reg-form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
